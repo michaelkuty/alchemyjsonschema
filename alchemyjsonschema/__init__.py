@@ -421,8 +421,8 @@ class SchemaFactory(object):
                     history.append(prop)
                     subwalker = self.child_factory.child_walker(prop, walker, history=history)
                     suboverrides = self.child_factory.child_overrides(prop, overrides)
-                    value = self.child_factory.child_schema(prop, self, root_schema, subwalker, suboverrides, depth=depth, history=history)
-                    self._add_property_with_reference(walker, root_schema, D, prop, value)
+                    # value = self.child_factory.child_schema(prop, self, root_schema, subwalker, suboverrides, depth=depth, history=history)
+                    # self._add_property_with_reference(walker, root_schema, D, prop, value)
                     history.pop()
                 elif action == FOREIGNKEY:  # ColumnProperty
                     for c in prop.columns:
